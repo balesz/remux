@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package remux.examples.counter;
+
+message CounterState {
+  int64 counter = 1;
+}
+
+message IncrementAction {}
+
+message ResetAction {}

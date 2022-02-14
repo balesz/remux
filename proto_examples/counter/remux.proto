@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package remux.examples.counter;
+
+import "counter.proto";
+import "google/protobuf/any.proto";
+
+service Remux {
+  rpc Dispatch(google.protobuf.Any) returns (stream State);
+}
+
+message State {
+  CounterState counter = 1;
+}
